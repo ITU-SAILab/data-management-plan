@@ -1,0 +1,248 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
+
+
+\pagestyle{fancy}
+\fancyhf{} % tüm header/footer temizlenir
+
+
+% Sağ üst yazı (gri renk, otomatik tarih)
+\fancyhead[R]{\textcolor{gray}{\small EU Grants: I-TEXGEO (HE: 101235387): V1.0 -- \today}}
+
+% Alt orta sayfa numarası
+
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=0.3\textwidth]{horizon.png}\\[4em]
+\includegraphics[width=0.6\textwidth]{flag.png}\\[4em]
+\large\textbf{Horizon Europe}\\[1em]
+\Large\textbf{Data Management Plan}\\[4em]
+\end{center}
+
+\begin{longtable}{@{}p{0.3\linewidth}p{0.65\linewidth}@{}}
+% toprule
+\\ 
+\textbf{Action Number:} & [101235387] \\ [0.5em]
+\textbf{Action Acronym:} & [I-TEXGEO] \\ [0.5em]
+\textbf{Action Title:} & [IoT Supported Electronic Geotextiles for Sustainable and Smart Precision Agriculture] \\ [0.5em]
+\textbf{Date:} & [\today] \\ [0.5em]
+\textbf{DMP Version:} & [1.0] \\ [0.5em]
+% \bottomrule
+\end{longtable}
+
+
+
+\newpage
+
+
+\section{Data Summary}
+
+The I-TEXGEO project will generate and collect several categories of research data to support its objective of developing an IoT-supported biodegradable geotextile-based sensor network. The data will include both observational data (e.g., continuous sensor monitoring and survey-based records) and experimental data (e.g., laboratory validation measurements).
+
+The main categories of data expected to be produced are:
+\begin{itemize}[leftmargin=2em]
+	\item Real-time Sensor Data: Continuous in-situ measurements of key soil parameters (e.g., moisture, temperature, pH, and NPK macronutrient levels) will be collected through the embedded geotextile sensor network. The data will primarily be stored and exchanged in structured, non-proprietary formats such as CSV, ensuring long-term accessibility and interoperability. Where required for real-time transmission and system integration, data may also be handled in lightweight machine-readable formats (e.g., JSON). All sensor data will be stored and managed using open-source database solutions and data management tools to support scalability, traceability, and reproducibility.
+	\item Laboratory Experimental Data: Data generated during laboratory validation activities will include performance measurements such as signal quality, resistance, capacitance, and communication-related parameters. Experimental datasets will be documented and stored mainly in CSV format for tabulated measurements, alongside additional supporting files produced by laboratory instruments when necessary. These data will also be archived and organized using open-source database and repository infrastructures, enabling transparent documentation, structured storage, and future reuse.
+	\item Textual and Documentation Data: Methodological descriptions, laboratory protocols, validation reports, technical deliverables, and metadata documentation. These will be stored in standard formats such as PDF, TXT, LaTeX and Markdown to ensure long-term accessibility.
+	\item Multimedia Data: Visual and audiovisual records such as photographs and videos from field trials, plant health assessments, and documentation of experimental procedures. These files will be stored in widely used formats such as JPEG, PNG, TIFF, MP4, and similar standards.
+	\item Software and Source Code: Open-source software components, including embedded control algorithms for microcontrollers (e.g., Arduino, ESP32), data acquisition scripts, and mobile/web application code. Version control and collaborative development will be managed through reliable repositories ensuring transparency, traceability, and reproducibility.
+
+\end{itemize}
+
+All data will be stored and managed using widely adopted and, where possible, open and non-proprietary formats, in order to maximize accessibility and long-term reusability.
+
+
+\section{FAIR Data}
+
+The Horizon Europe guidelines on Data Management Plans emphasize the importance of applying the principles of Findability, Accessibility, Interoperability, and Reusability (FAIR) when managing research data produced within EU-funded projects. In alignment with these principles, the project is committed to implementing appropriate strategies to ensure effective and responsible management of all relevant project data.
+
+Findability: I-TEXGEO will apply appropriate documentation practices and metadata standards to improve the discoverability of its datasets. Descriptive metadata and consistent file naming conventions will support efficient search and retrieval.
+
+Accessibility: I-TEXGEO will define clear procedures for data access and sharing, specifying which datasets will be openly available and under which conditions. Data will be shared through suitable repositories and platforms to ensure broad accessibility where possible.
+
+Interoperability: I-TEXGEO will promote data exchange by prioritizing standardised formats and widely accepted practices that ensure compatibility across different systems, disciplines, and research infrastructures.
+
+Preservation and Open Access: I-TEXGEO is committed to preserving its research data for long-term usability. Appropriate archiving and storage solutions will be applied, and open access will be supported through repository deposition and suitable licensing mechanisms whenever feasible.
+
+Promoting Reusability: I-TEXGEO recognises the value of reusing scientific data and will support reusability by providing adequate documentation, metadata, and clear licensing terms. This approach will encourage data sharing and facilitate future scientific collaboration.
+
+
+\subsection{Making Data Findable}
+
+The project will ensure that all research data are made findable in line with the FAIR principles. Metadata will be created to describe each dataset and support its identification, interpretation, and future reuse. This metadata will include essential descriptive elements such as dataset title, data type, collection period, responsible partner, and relevant project keywords.
+
+To improve traceability and long-term discoverability, the project will apply consistent file naming conventions and version control practices where applicable. File names will systematically include key experimental parameters such as the geographical test sites, the sensor type (e.g., moisture, pH, NPK), and the depth of measurement, as these variables are critical for distinguishing field observations and ensuring proper dataset interpretation.
+
+In addition, the project will adopt standardized keywords, classifications, and 
+EU controlled vocabularies, to enhance indexing and retrieval.
+Where relevant, appropriate domain-specific terminologies will be considered
+to ensure consistent description of soil parameters and sensor-based measurements.
+This approach will improve interoperability and facilitate the integration of
+project datasets with external repositories and open research infrastructures.
+
+When deposited in trusted repositories, datasets will be assigned persistent identifiers such as Digital Object Identifiers (DOIs), ensuring that they remain citable and locatable over time. Metadata will be made available alongside the datasets in accordance with repository requirements and Horizon Europe open science guidelines.
+
+
+\subsection{Making Data Accessible}
+
+The project will ensure that research data and associated metadata are made accessible in accordance with the Horizon Europe open science requirements. Wherever possible, datasets will be shared through trusted open repositories (e.g., Zenodo or institutional repositories), enabling access for researchers, stakeholders, and the broader scientific community.
+
+Access conditions will be clearly described in the repository metadata, including information on how the data can be retrieved, under which terms, and whether any restrictions apply. Open access will be the default approach, while certain datasets may be subject to limited access if justified by intellectual property protection, security considerations, or other legitimate restrictions.
+
+In cases where full public access cannot be provided, the project will ensure that metadata remains publicly available and that access to the underlying datasets can be granted under controlled conditions whenever feasible. This approach ensures transparency while balancing openness with responsible data handling.
+
+
+\subsection{Making Data Interoperable}
+
+The project will ensure interoperability by using widely accepted standards,
+structured data formats, and consistent documentation practices. Data will be
+stored and exchanged using open and non-proprietary formats whenever possible
+(e.g., CSV for tabular sensor outputs, JSON for structured metadata, and
+PDF/TXT/LaTeX/Markdown for documentation), ensuring that datasets can be accessed
+and processed across different software environments.
+
+To facilitate integration with external datasets and long-term reuse, the project
+will apply consistent data structures, clear variable definitions, and standard
+measurement units. Where relevant, commonly used vocabularies and terminology
+from agriculture, environmental monitoring, and engineering domains will be
+adopted to improve semantic interoperability. This will allow project data to be
+combined with other datasets and reused by third parties with minimal
+transformation effort.
+
+\subsection{Making Data Reusable}
+
+The project will promote the reusability of its data by ensuring that datasets
+are accompanied by sufficient documentation and contextual information.
+This includes descriptions of data collection procedures, sensor calibration
+information, experimental conditions, and any relevant processing steps applied
+to the raw measurements.
+
+Data quality will be supported through validation procedures and the use of
+consistent file naming and version control practices. Whenever possible,
+datasets will be shared under open licenses (e.g., Creative Commons licenses
+such as CC BY) to enable broad reuse, redistribution, and adaptation with
+appropriate attribution.
+
+In addition, the project will ensure that metadata and documentation are
+sufficiently detailed to allow external researchers to interpret the data
+correctly and reproduce key findings. This approach will maximize the long-term
+scientific value of the datasets and contribute to the sustainability and impact
+of the project outputs.
+
+
+\section{Other Research Outputs}
+
+In addition to research datasets, the project will generate other research
+outputs such as technical documentation, system design descriptions, sensor
+calibration procedures, software components, and dissemination materials.
+Where applicable, these outputs (e.g., reports, guidelines, and open-source
+software) will be made available through open repositories to support
+transparency and reproducibility. Outputs that are not suitable for open
+release due to intellectual property or exploitation plans will be managed
+under controlled access conditions.
+
+
+\section{Allocation of Resources}
+
+Data management activities will be coordinated across all work packages under the
+responsibility of the designated Data Manager,
+(\href{mailto:kilicbu16@itu.edu.tr}{Burak KILIÇ}). Responsibilities
+include ensuring compliance with FAIR principles, coordinating
+metadata creation, supporting consistent file naming conventions, and
+monitoring repository deposition procedures.
+
+Project partners will contribute to data collection, documentation, and quality
+control within their respective tasks. Data storage, long-term preservation,
+and persistent identifier (DOI) assignment will be supported through trusted
+repositories such as Zenodo and/or institutional repositories.
+
+The total volume of data generated during the project is estimated to be
+approximately 500 GB. To ensure long-term usability and scientific validation,
+key datasets will be preserved for a minimum of 10 years following the project's
+conclusion. The resources required for data management, including storage
+capacity, backup infrastructure, and personnel effort, will be covered within
+the project budget.
+
+
+\section{Data Security}
+
+All project partners will be responsible for secure data handling throughout the 
+project lifecycle. Data will be stored on trusted cloud platforms and 
+institutional servers with controlled access and regular backup procedures. 
+Access rights will be managed to prevent unauthorized access, modification, or 
+loss of data.
+
+Sensitive or restricted data (e.g., partner-specific technical information or 
+farm-level operational data) will be stored under limited access conditions. 
+Cloud access will be managed using secure authentication mechanisms such as 
+SSH key-based access. Additional security measures (e.g., encrypted transfer 
+protocols and restricted access policies) will be applied whenever required, 
+depending on the sensitivity of the data and the operational context. Backup 
+copies will be maintained to ensure data integrity and continuity in case of 
+technical failure.
+
+\section{Ethics}
+
+The project will comply with relevant ethical principles and European Union
+regulations, including the General Data Protection Regulation (GDPR, EU 2016/679).
+The project is not expected to process personal data as a core activity.
+If any personal or sensitive information arises indirectly (e.g.,
+location-related field trial information linked to stakeholders),
+appropriate safeguards such as anonymization and controlled access will be applied.
+
+No major ethical barriers are anticipated for the project activities,
+and all research procedures will be conducted in accordance with
+institutional and national regulations.
+
+
+\section{Other Issues}
+
+No additional issues are currently foreseen. The project will continue to monitor 
+developments related to data management practices, repository requirements, and 
+relevant regulatory frameworks.
+
+
+\section{Revision Policy}
+
+This Data Management Plan will be treated as a living document and will be 
+reviewed periodically throughout the project lifetime. Updates will be made when 
+necessary to reflect changes in data types, data volume, repository selection, 
+access conditions, licensing, or any new legal, ethical, or technical requirements.
+
+Revisions will also be introduced if project dissemination and exploitation 
+strategies evolve, or if additional datasets and research outputs are generated 
+beyond those currently foreseen. All updates will aim to ensure continued 
+compliance with Horizon Europe open science requirements and FAIR data principles.
+
+\section{Revision History}
+
+\begin{longtable}{@{}p{0.2\linewidth}p{0.25\linewidth}p{0.5\linewidth}@{}}
+\toprule
+\textbf{Version} & \textbf{Date} & \textbf{Description of Changes} \\
+\midrule
+1.0 & \today & Initial version of the Data Management Plan. \\
+\bottomrule
+\end{longtable}
+
+
+\end{document}
